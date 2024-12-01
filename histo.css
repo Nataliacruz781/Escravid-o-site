@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: arial, sans-serif;
+    line-height: 1.6;
+    background-color: rgb(235, 165, 75);
+}
+main{
+    display: grid;
+    grid-template-areas: 
+    " header header"
+    "nav section"
+    "aside article"
+    "footer footer";
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    padding: 20px;
+}
+h1{
+    grid-area: header;
+    text-align: center;
+    color: darkred;
+}
+a href{
+    background-color: burlywood;
+    padding: 15px;
+    border-radius: 5px;
+}
+nav{
+    grid-area: nav;
+}
+section{
+    grid-area: section;
+    background-color: cadetblue;
+    padding: 15px;
+    border-radius: 5px;
+}
+article{
+    grid-area: article;
+}
+figure{
+    margin-top: 10px;
+}
+footer{
+    grid-area: footer;
+}
+ol{
+    padding-left: 20px;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+header a{
+    text-decoration: none;
+}
+header a:hover{
+    color: chartreuse;
+}
+@media(max-width:768px)
+main{
+    grid-template-areas:
+    "header" 
+    "nav"
+    "section" 
+    "aside" 
+    "article"
+    "footer";
+    grid-template-columns:1fr;
+    gap:10px;
+}
+
+h1{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+section, aside, footer{
+    padding: 10px;
+    font-size: 0.9em;
+    background-color: blanchedalmond;
+    box-shadow: none;
+}
